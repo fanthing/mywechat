@@ -1,0 +1,9 @@
+<!--pages/consultation/consultation.wxml-->
+<scroll-view scroll-y>
+   <view class="title">
+     <text>{{introduction.title}}</text>
+   </view>
+   <view class="content">
+    <text>{{introduction.content}}</text>
+   </view>
+ </scroll-view>

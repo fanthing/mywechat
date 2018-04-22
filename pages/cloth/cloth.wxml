@@ -1,0 +1,21 @@
+<!--pages/cloth/cloth.wxml-->
+<view class="container">
+<view>
+  <text>布行名称</text>
+  <input bindinput="bindKeyInput1" type="text" placeholder="请输入" focus/>
+</view>
+<view>
+  <text>布行地址</text>
+  <input bindinput="bindKeyInput2" type="text" placeholder="请输入" value="{{text}}"/>
+</view>
+<view>
+  <text>电话</text>
+  <input bindinput="bindKeyInput3" type="text" placeholder="请输入"/>
+</view>
+<view catchtap="cancel" class="button">
+  <text>取消</text>
+  <view catchtap="save">
+    <text>保存</text>
+  </view>
+</view>
+</view>

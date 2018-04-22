@@ -1,0 +1,53 @@
+/* pages/mine/mine.wxss */
+
+.userinfo-avatar {
+  width: 170rpx;
+  height: 170rpx;
+  margin-top: 48rpx;
+  border-radius: 50%;
+}
+
+.membercardName {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.bottom{
+  margin-top: 68rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.membercard{
+  border-bottom: 1rpx solid #ccc;
+}
+.phone-cls {
+  height: 128rpx;
+  width: 100%;
+  padding:0 35rpx;
+  box-sizing: border-box;
+}
+.phone-cls view{
+  display: inline-block;
+  width: 640rpx;
+  vertical-align: -15rpx;
+}
+.phone-cls text:nth-of-type(1){
+  margin-top: 20rpx;
+  display: block;
+  font-size: 28rpx;
+}
+.phone-cls text:nth-of-type(2){
+  display: block;
+  font-size: 28rpx;
+  color:#666;
+  white-space : nowrap ;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.phone-cls image{
+  height: 32rpx;
+  width: 32rpx;
+  display: inline-block;
+}
+.share-cls text:nth-of-type(2){
+  color:#DC4623;
+  font-size: 34rpx;
+}

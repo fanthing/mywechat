@@ -1,0 +1,35 @@
+/* pages/register/register.wxss */
+
+.userinfo-avatar {
+  width: 170rpx;
+  height: 170rpx;
+  margin-top: 48rpx;
+  border-radius: 50%;
+}
+
+.membercardName {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+input{
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  background-color: #FFF;
+  height: 90rpx;
+  width: 540rpx;
+  margin:9rpx 0;
+}
+
+view.button{
+  margin: 164rpx 0 0 0;
+  width: 428rpx;
+  height: 76rpx;
+  border-radius: 40rpx;
+  background-color: #DC4623;
+  color:#FFF;
+  text-align: center;
+  line-height: 76rpx;
+}
+.weui-icon-checkbox_success{
+  color:#DC4623;
+}

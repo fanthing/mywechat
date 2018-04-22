@@ -1,0 +1,78 @@
+/* pages/integral/integral.wxss */
+.integral{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title{
+  margin: 30rpx 0 0 28rpx;
+  width: 158rpx;
+  height: 46rpx;
+  border-radius: 23rpx;
+  background-color: #d34228;
+  color: #FFF;
+  text-align: center;
+  align-self:flex-start;
+}
+.title text{
+  font-size: 30rpx;
+  display: block;
+}
+.marginbottom{
+  margin-bottom: 20rpx;
+}
+.jifentext{
+  width: 320rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  background-color: #d34228;
+  color: #FFF;
+  text-align: center;
+  font-size: 50rpx;
+  line-height:  92rpx;
+}
+.integralItem-view:last-of-type{
+  border-bottom: 1rpx solid #ccc;
+}
+.integralItem-view{
+  width: 100%;
+  height: 118rpx;
+  border-top: 1rpx solid #ccc;
+  padding: 0 68rpx;
+  box-sizing:border-box;
+}
+
+.integralItem-view view{
+  display: inline-block;
+}
+.detailed{
+  width: 460rpx;
+  height: 100%;
+  padding-top:15rpx;
+  vertical-align: bottom;
+  color: #666665;
+}
+.detailed text:nth-of-type(1){
+  display: block;
+  font-size: 36rpx;
+  white-space : nowrap ;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.detailed text:nth-of-type(2){
+  display: block;
+  font-size: 22rpx;
+}
+.integralItem{
+  height: 100%;
+}
+.integralItem text{
+  display: block;
+  color: #d34228;
+  font-size: 36rpx;
+}

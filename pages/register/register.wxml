@@ -1,0 +1,35 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class="membercardName">
+
+  </view>
+  <view style="margin-top:52rpx;">
+    <input bindinput="bindKeyInput1" type="text" placeholder="手机号码"/>
+  </view>
+  <view>
+    <input bindinput="bindKeyInput2" type="text" placeholder="布行名称"/>
+  </view>
+  <view>
+    <input bindinput="bindKeyInput3" type="text" placeholder="布行地址"/>
+  </view>
+  <view>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="weui-cell weui-check__label">
+      <checkbox class="weui-check" value="{{checkbox.value}}" checked="{{checkbox.checked}}"/>
+      <view class="weui-cell__hd weui-check__hd_in-checkbox">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!checkbox.checked}}"></icon>
+          <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{checkbox.checked}}"></icon>
+      </view>
+      <view class="weui-cell__bd">同意xxx用户协议</view>
+    </label>
+  </checkbox-group>
+  </view>
+  <view catchtap="save" class="button">
+    <text>保存</text>
+
+  </view>
+
+
+
+</view>

@@ -1,0 +1,17 @@
+<!--pages/myphone/myphone.wxml-->
+<view class="container">
+<view>
+  <text>手机号码</text>
+  <input bindinput="bindKeyInput" type="number" placeholder="请输入" focus/>
+</view>
+<view>
+  <text>新手机号码</text>
+  <input bindinput="bindKeyInputNew" type="number" placeholder="请输入"/>
+</view>
+<view catchtap="cancel" class="button">
+  <text>取消</text>
+  <view catchtap="save">
+    <text>保存</text>
+  </view>
+</view>
+</view>

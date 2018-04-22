@@ -1,0 +1,37 @@
+/* pages/cloth/cloth.wxss */
+.container view{
+  width: 90%;
+  margin-top: 58rpx;
+}
+text{
+  font-size: 32rpx;
+  font-weight: 400;
+}
+input{
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  background-color: #FFF;
+  height: 76rpx;
+}
+view.button{
+  width: 428rpx;
+  height: 80rpx;
+  box-shadow: 0 0 20rpx 2rpx #bfbfbf;
+  background-color: #FFF;
+  border-radius: 40rpx;
+  margin-top: 476rpx;
+}
+.button text{
+  display: inline-block;
+  line-height: 80rpx;
+  margin-left: 78rpx;
+}
+view.button view{
+  display: inline-block;
+  float: right;
+  width: 230rpx;
+  border-radius: 40rpx;
+  background-color: #DC4623;
+  color:#FFF;
+  margin-top: 0;
+}

@@ -1,0 +1,58 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class="membercardName">
+    <text>{{membercardName}}</text>
+  </view>
+  <view catchtap="tomyphone" class="phone-cls bottom">
+    <view>
+      <text>手机号码</text>
+      <text>{{phoneNumber}}</text>
+    </view>
+    <image mode="aspectFill" src="{{nextbuttonsrc}}"></image>
+  </view>
+  <view catchtap="tocloth" class="membercard">
+    <view class="phone-cls">
+      <view>
+        <text>布行名称</text>
+        <text>{{membercardName}}</text>
+      </view>
+      <image mode="aspectFill" src="{{nextbuttonsrc}}"></image>
+    </view>
+    <view class="phone-cls">
+      <view>
+        <text>布行地址</text>
+        <text>{{membercardaddre}}</text>
+      </view>
+      <image mode="aspectFill" src="{{nextbuttonsrc}}"></image>
+    </view>
+    <view class="phone-cls">
+      <view>
+        <text>电话</text>
+        <text>{{tel}}</text>
+      </view>
+      <image mode="aspectFill" src="{{nextbuttonsrc}}"></image>
+    </view>
+  </view>
+  <view class="phone-cls share-cls">
+    <view>
+      <text>分享码</text>
+      <text>{{shareNumber}}</text>
+    </view>
+  </view>
+
+
+
+
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <button class="weui-btn" type="primary">页面主操作 Normal</button>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

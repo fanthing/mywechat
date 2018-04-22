@@ -1,31 +1,41 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/mine/logs"
+    "pages/integral/integral",
+    "pages/introduction/introduction",
+    "pages/consultation/consultation",
+    "pages/mine/mine",
+    "pages/myphone/myphone",
+    "pages/cloth/cloth",
+    "pages/register/register"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#DC4623",
     "navigationBarTitleText": "会员中心",
-    "navigationBarTextStyle":"white",
-    "backgroundColor":"#ECF0EE"
-
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ECF0EE"
   },
   "tabBar": {
-    "selectedColor":"#DC4623",
-    "list": [
-      {
+    "selectedColor": "#DC4623",
+    "list": [{
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "static/img/index-icon.png",
+        "selectedIconPath": "static/img/index-active-icon.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "订单"
+        "pagePath": "pages/register/register",
+        "text": "订单",
+        "iconPath": "static/img/order-icon.png",
+        "selectedIconPath": "static/img/order-active-icon.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "我的"
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/img/user-icon.png",
+        "selectedIconPath": "static/img/user-active-icon.png"
       }
     ]
   },
