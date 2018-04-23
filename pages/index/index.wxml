@@ -16,14 +16,14 @@
           <text>{{membercardName}}</text>
        </view>
        <view class="membercard-jifen">
-          <text>积分</text>
+          <text>果币</text>
           <text catchtap="integralItem">{{integral}}</text>
        </view>
    </view>
    <view class="share">
      <view class="sharebutton">
         <image mode="aspectFill" src="{{sharebuttonsrc}}"></image>
-        <text>分享赚积分</text>
+        <text>分享赚果币</text>
      </view>
 
      <view class="jifentext">

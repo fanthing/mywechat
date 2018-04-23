@@ -1,13 +1,13 @@
 <!--pages/integral/integral.wxml-->
 <view class="integral">
   <view class="title">
-    <text>个人积分</text>
+    <text>个人果币</text>
   </view>
   <view class="jifentext">
     <text>10000</text>
   </view>
   <view class="title marginbottom">
-    <text>积分明细</text>
+    <text>果币明细</text>
   </view>
     <view class="integralItem-view" wx:for="{{integralItem}}" wx:key="id">
       <view class="detailed">
