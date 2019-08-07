@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/register/register",
     "pages/index/index",
     "pages/logs/logs",
     "pages/integral/integral",
@@ -7,8 +8,7 @@
     "pages/consultation/consultation",
     "pages/mine/mine",
     "pages/myphone/myphone",
-    "pages/cloth/cloth",
-    "pages/register/register"
+    "pages/cloth/cloth"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,12 +25,7 @@
         "iconPath": "static/img/index-icon.png",
         "selectedIconPath": "static/img/index-active-icon.png"
       },
-      {
-        "pagePath": "pages/register/register",
-        "text": "订单",
-        "iconPath": "static/img/order-icon.png",
-        "selectedIconPath": "static/img/order-active-icon.png"
-      },
+
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",

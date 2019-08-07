@@ -1,4 +1,5 @@
 // pages/integral/integral.js
+const app = getApp()
 Page({
 
   /**
@@ -37,7 +38,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.request('/appService/getPointItemByWeixinId', {
+      weixinId: app.globalData.weixinId
+    }, (res) => {
+      if (res.data.code == 200) {
+        var url = [];
+        for (let i in res.data.rows) {
+          url.push({
+            id: 2,
+            detailed: '购物赠送',
+            datetime: '2018-04-11',
+            integral: '100'
+          })
+        }
+        this.setData({
+          bannerUrl: url
+        })
 
+      } else {
+        wx.showToast({
+          title: res.data.message,
+          duration: 2000,
+          icon: 'none'
+        })
+      }
+    }, function (err) {
+      console.log("err", err);
+      wx.showToast({
+        title: '网络故障，请稍后重试',
+        duration: 2000,
+        icon: 'none'
+      })
+    })
   },
 
   /**

@@ -7,23 +7,14 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    bannerUrl: [{
-      src: '/static/img/banner1.png',
-      url: '1'
-    }, {
-      src: '/static/img/banner2.png',
-      url: '2'
-    }, {
-      src: '/static/img/banner3.png',
-      url: '3'
-    }],
+    bannerUrl: [],
     interval: 5000,
     membercardNumber: '186****1111',
     membercardName: '布行名称',
-    integral: 10000,
+    integral: 0,
     sharebuttonsrc: '/static/img/share.png',
-    sharetext: ["好友下单各得500分",
-      "每年下单再得1000分"
+    sharetext: ["好友下单各得500果币",
+      "每年下单再得1000果币"
     ]
   },
   //事件处理函数
@@ -43,40 +34,71 @@ Page({
     })
   },
   tapawiper: function (item) {
-    console.log("1", item.currentTarget.dataset.url)
+    console.log("1", item.currentTarget.dataset.id)
     wx.navigateTo({
-      url: '/pages/consultation/consultation'
+      url: '/pages/consultation/consultation?id=' + item.currentTarget.dataset.id
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+    this.setData({
+      userInfo: app.globalData.userInfo || {},
+      membercardNumber: app.globalData.phone,
+      membercardName: app.globalData.membercardName
+    })
+    app.request('/appService/getTotalPointByWeixinId', {
+      weixinId: app.globalData.weixinId
+    }, (res) => {
+      if (res.data.code == 200) {
+        console.log(res)
+        app.globalData.shareNumber = res.data.rows.shareCode;
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+          integral: res.data.rows.point
         })
-        wx.setStorageSync('userInfo', res.userInfo)
+      } else {
+        wx.showToast({
+          title: res.data.message,
+          duration: 2000,
+          icon: 'none'
+        })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-          wx.setStorageSync('userInfo', res.userInfo)
-        }
+    }, function (err) {
+      console.log("err", err);
+      wx.showToast({
+        title: '网络故障，请稍后重试',
+        duration: 2000,
+        icon: 'none'
       })
-    }
+    })
+    app.request('/appService/getAdvertList', {
+      weixinId: app.globalData.weixinId
+    }, (res) => {
+      if (res.data.code == 200) {
+        var url = [];
+        for (let i in res.data.rows) {
+          url.push({
+            src: res.data.rows[i].banner,
+            id: res.data.rows[i].id
+          })
+        }
+        this.setData({
+          bannerUrl: url
+        })
+
+      } else {
+        wx.showToast({
+          title: res.data.message,
+          duration: 2000,
+          icon: 'none'
+        })
+      }
+    }, function (err) {
+      console.log("err", err);
+      wx.showToast({
+        title: '网络故障，请稍后重试',
+        duration: 2000,
+        icon: 'none'
+      })
+    })
   },
   getUserInfo: function (e) {
     console.log(e)
